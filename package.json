@@ -1,10 +1,10 @@
 {
-  "name": "react-native-countdown-component",
-  "version": "2.7.1",
+  "name": "@yakalexey/react-native-countdown-component",
+  "version": "1.0.0",
   "description": "React Native CountDown Component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/talalmajali/react-native-countdown-component.git"
+    "url": "https://github.com/YakAlexey/react-native-countdown-component.git"
   },
   "keywords": [
     "react-native",
@@ -18,12 +18,12 @@
     "countdown"
   ],
   "author": {
-    "name": "Talal Majali",
-    "email": "t.majali93@gmail.com"
+    "name": "Alexey Yak",
+    "email": "yak.alexey@outlook.com"
   },
-  "homepage": "https://github.com/talalmajali/react-native-countdown-component",
+  "homepage": "https://github.com/YakAlexey/react-native-countdown-component",
   "bugs": {
-    "url": "https://github.com/talalmajali/react-native-countdown-component/issues"
+    "url": "https://github.com/YakAlexey/react-native-countdown-component/issues"
   },
   "dependencies": {
     "lodash": "^4.17.13",
