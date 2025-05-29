@@ -27,7 +27,10 @@
   },
   "dependencies": {
     "lodash": "^4.17.13",
-    "sprintf-js": "^1.1.1",
-    "prop-types": "^15.5.8"
+    "prop-types": "^15.5.8",
+    "sprintf-js": "^1.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
   }
 }
