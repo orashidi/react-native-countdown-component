@@ -31,6 +31,13 @@
     "sprintf-js": "^1.1.1"
   },
   "devDependencies": {
-    "prettier": "^3.5.3"
+    "@react-native/typescript-config": "^0.79.2",
+    "@types/lodash": "^4.17.17",
+    "@types/prop-types": "^15.7.14",
+    "@types/react": "^19.0.0",
+    "@types/sprintf-js": "^1.1.4",
+    "prettier": "^3.5.3",
+    "react-native": "^0.79.2",
+    "typescript": "^5.8.3"
   }
 }
