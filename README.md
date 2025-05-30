@@ -2,7 +2,7 @@
 React Native CountDown
 
 ## Installation
-Run `npm install react-native-countdown-component --save` OR `yarn add react-native-countdown-component --save`
+Run `npm install @yakalexey/react-native-countdown-component --save` OR `yarn add @yakalexey/react-native-countdown-component --save`
 
 ## Props
 | Name | Description | Type | Default Value |
