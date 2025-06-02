@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { StyleSheet, View, Text, TouchableOpacity, AppState } from 'react-native'
-import _ from 'lodash'
 import { sprintf } from 'sprintf-js'
 import { CountDownProps, CountDownState } from './countdown.types'
 
