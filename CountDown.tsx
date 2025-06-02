@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, AppState } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, AppState, AppStateStatus } from 'react-native'
 
 import { CountDownProps, CountDownState } from './countdown.types'
 
@@ -16,14 +16,18 @@ const DEFAULT_TIME_LABELS = {
 }
 
 export class CountDown extends React.Component<CountDownProps, CountDownState> {
-  state = {
-    until: Math.max(this.props.until, 0),
-    lastUntil: null,
-    wentBackgroundAt: null,
-  }
+  private timer: number | null = null
+  private appStateSubscription: any
 
-  constructor(props) {
+  constructor(props: CountDownProps) {
     super(props)
+
+    this.state = {
+      until: Math.max(this.props.until, 0),
+      lastUntil: null,
+      wentBackgroundAt: null,
+    }
+
     this.timer = setInterval(this.updateTimer, 1000)
   }
 
@@ -32,11 +36,14 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
   }
 
   componentWillUnmount() {
-    clearInterval(this.timer)
+    if (this.timer) {
+      clearInterval(this.timer)
+      this.timer = null
+    }
     this.appStateSubscription && this.appStateSubscription.remove()
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps: CountDownProps, prevState: CountDownState) {
     if (this.props.until !== prevProps.until || this.props.id !== prevProps.id) {
       this.setState({
         lastUntil: prevState.until,
@@ -53,7 +60,7 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
   //   }
   // }
 
-  _handleAppStateChange = currentAppState => {
+  _handleAppStateChange = (currentAppState: AppStateStatus) => {
     const { until, wentBackgroundAt } = this.state
     if (currentAppState === 'active' && wentBackgroundAt && this.props.running) {
       const diff = (Date.now() - wentBackgroundAt) / 1000.0
@@ -107,7 +114,7 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     }
   }
 
-  renderDigit = d => {
+  renderDigit = (d: string): React.JSX.Element => {
     const { digitStyle, digitTxtStyle, size } = this.props
     return (
       <View style={[styles.digitCont, { width: size * 2.3, height: size * 2.6 }, digitStyle]}>
@@ -116,14 +123,14 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     )
   }
 
-  renderLabel = label => {
+  renderLabel = (label: string): React.JSX.Element | undefined => {
     const { timeLabelStyle, size } = this.props
     if (label) {
       return <Text style={[styles.timeTxt, { fontSize: size / 1.8 }, timeLabelStyle]}>{label}</Text>
     }
   }
 
-  renderDoubleDigits = (label, digits) => {
+  renderDoubleDigits = (label: string, digits: string): React.JSX.Element => {
     return (
       <View style={styles.doubleDigitCont}>
         <View style={styles.timeInnerCont}>{this.renderDigit(digits)}</View>
@@ -132,7 +139,7 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     )
   }
 
-  renderSeparator = () => {
+  renderSeparator = (): React.JSX.Element => {
     const { separatorStyle, size } = this.props
     return (
       <View style={{ justifyContent: 'center', alignItems: 'center' }}>
@@ -141,7 +148,7 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     )
   }
 
-  renderCountDown = () => {
+  renderCountDown = (): React.JSX.Element => {
     const { timeToShow, timeLabels, showSeparator } = this.props
     const { until } = this.state
     const { days, hours, minutes, seconds } = this.getTimeLeft()
