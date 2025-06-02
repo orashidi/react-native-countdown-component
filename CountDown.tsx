@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 import { StyleSheet, View, Text, TouchableOpacity, AppState } from 'react-native'
 import _ from 'lodash'
@@ -19,21 +18,6 @@ const DEFAULT_TIME_LABELS = {
 }
 
 export class CountDown extends React.Component<CountDownProps, CountDownState> {
-  static propTypes = {
-    id: PropTypes.string,
-    digitStyle: PropTypes.object,
-    digitTxtStyle: PropTypes.object,
-    timeLabelStyle: PropTypes.object,
-    separatorStyle: PropTypes.object,
-    timeToShow: PropTypes.array,
-    showSeparator: PropTypes.bool,
-    size: PropTypes.number,
-    until: PropTypes.number,
-    onChange: PropTypes.func,
-    onPress: PropTypes.func,
-    onFinish: PropTypes.func,
-  }
-
   state = {
     until: Math.max(this.props.until, 0),
     lastUntil: null,
