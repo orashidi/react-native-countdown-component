@@ -1,7 +1,6 @@
 import React from 'react'
-
 import { StyleSheet, View, Text, TouchableOpacity, AppState } from 'react-native'
-import { sprintf } from 'sprintf-js'
+
 import { CountDownProps, CountDownState } from './countdown.types'
 
 const DEFAULT_DIGIT_STYLE = { backgroundColor: '#FAB913' }
@@ -146,7 +145,13 @@ export class CountDown extends React.Component<CountDownProps, CountDownState> {
     const { timeToShow, timeLabels, showSeparator } = this.props
     const { until } = this.state
     const { days, hours, minutes, seconds } = this.getTimeLeft()
-    const newTime = sprintf('%02d:%02d:%02d:%02d', days, hours, minutes, seconds).split(':')
+    const newTime = [
+      String(days).padStart(2, '0'),
+      String(hours).padStart(2, '0'),
+      String(minutes).padStart(2, '0'),
+      String(Math.floor(seconds)).padStart(2, '0'),
+    ]
+
     const Component = this.props.onPress ? TouchableOpacity : View
 
     return (
