@@ -21,6 +21,7 @@
     "name": "Alexey Yak",
     "email": "yak.alexey@outlook.com"
   },
+  "license": "MIT",
   "homepage": "https://github.com/YakAlexey/react-native-countdown-component",
   "bugs": {
     "url": "https://github.com/YakAlexey/react-native-countdown-component/issues"
