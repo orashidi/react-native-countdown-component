@@ -11,11 +11,11 @@ Run `npm install @yakalexey/react-native-countdown-component`
 | Name           | Description                                                  | Type                    |                    Default Value                    |
 | :------------- | :----------------------------------------------------------- | :---------------------- | :-------------------------------------------------: |
 | id             | Counter ID, to determine whether to reset the counter or not | string                  |                        null                         |
-| style          | Override the component style                                 | StyleProp<ViewStyle>    |                         {}                          |
-| digitStyle     | Digit style                                                  | StyleProp<ViewStyle>    |           {backgroundColor: `'#FAB913'`}            |
-| digitTxtStyle  | Digit Text style                                             | StyleProp<TextStyle>    |                  {color: `'#000'`}                  |
-| timeLabelStyle | Time Label style                                             | StyleProp<TextStyle>    |                  {color: `'#000'`}                  |
-| separatorStyle | Separator style                                              | StyleProp<TextStyle>    |                  {color: `'#000'`}                  |
+| style          | Override the component style                                 | `StyleProp<ViewStyle>`  |                         {}                          |
+| digitStyle     | Digit style                                                  | `StyleProp<ViewStyle>`  |           {backgroundColor: `'#FAB913'`}            |
+| digitTxtStyle  | Digit Text style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
+| timeLabelStyle | Time Label style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
+| separatorStyle | Separator style                                              | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
 | size           | Size of the countdown component                              | number                  |                         15                          |
 | until          | Number of seconds to countdown                               | number                  |                          0                          |
 | onFinish       | What function should be invoked when the time is 0           | () => void              |                        null                         |
