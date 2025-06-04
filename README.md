@@ -6,26 +6,6 @@ React Native CountDown
 
 Run `npm install @yakalexey/react-native-countdown-component`
 
-## Props
-
-| Name           | Description                                                  | Type                    |                    Default Value                    |
-| :------------- | :----------------------------------------------------------- | :---------------------- | :-------------------------------------------------: |
-| id             | Counter ID, to determine whether to reset the counter or not | string                  |                        null                         |
-| style          | Override the component style                                 | `StyleProp<ViewStyle>`  |                         {}                          |
-| digitStyle     | Digit style                                                  | `StyleProp<ViewStyle>`  |           {backgroundColor: `'#FAB913'`}            |
-| digitTxtStyle  | Digit Text style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
-| timeLabelStyle | Time Label style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
-| separatorStyle | Separator style                                              | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
-| size           | Size of the countdown component                              | number                  |                         15                          |
-| until          | Number of seconds to countdown                               | number                  |                          0                          |
-| onFinish       | What function should be invoked when the time is 0           | () => void              |                        null                         |
-| onChange       | What function should be invoked when the timer is changing   | (until: number) => void |                        null                         |
-| onPress        | What function should be invoked when clicking on the timer   | () => void              |                        null                         |
-| timeToShow     | What Digits to show                                          | DigitType[]             |                ['D', 'H', 'M', 'S']                 |
-| timeLabels     | Text to show in time label                                   | object                  | {d: 'Days', h: 'Hours', m: 'Minutes', s: 'Seconds'} |
-| showSeparator  | Should show separator                                        | boolean                 |                        false                        |
-| running        | A boolean to pause and resume the component                  | boolean                 |                        true                         |
-
 ## Preview
 
 ![React Native Countdown](https://media.giphy.com/media/xT0xeLWYNSaLerFGko/giphy.gif 'React Native Countdown')
@@ -46,6 +26,26 @@ render() {
     )
 }
 ```
+
+## Props
+
+| Name           | Description                                                  | Type                    |                    Default Value                    |
+| :------------- | :----------------------------------------------------------- | :---------------------- | :-------------------------------------------------: |
+| id             | Counter ID, to determine whether to reset the counter or not | string                  |                        null                         |
+| style          | Override the component style                                 | `StyleProp<ViewStyle>`  |                         {}                          |
+| digitStyle     | Digit style                                                  | `StyleProp<ViewStyle>`  |           {backgroundColor: `'#FAB913'`}            |
+| digitTxtStyle  | Digit Text style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
+| timeLabelStyle | Time Label style                                             | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
+| separatorStyle | Separator style                                              | `StyleProp<TextStyle>`  |                  {color: `'#000'`}                  |
+| size           | Size of the countdown component                              | number                  |                         15                          |
+| until          | Number of seconds to countdown                               | number                  |                          0                          |
+| onFinish       | What function should be invoked when the time is 0           | () => void              |                        null                         |
+| onChange       | What function should be invoked when the timer is changing   | (until: number) => void |                        null                         |
+| onPress        | What function should be invoked when clicking on the timer   | () => void              |                        null                         |
+| timeToShow     | What Digits to show                                          | DigitType[]             |                ['D', 'H', 'M', 'S']                 |
+| timeLabels     | Text to show in time label                                   | object                  | {d: 'Days', h: 'Hours', m: 'Minutes', s: 'Seconds'} |
+| showSeparator  | Should show separator                                        | boolean                 |                        false                        |
+| running        | A boolean to pause and resume the component                  | boolean                 |                        true                         |
 
 ## Custom Styling Example
 
