@@ -4,7 +4,7 @@ React Native CountDown
 
 ## Installation
 
-Run `npm install @yakalexey/react-native-countdown-component`
+Run `npm install @orashidi/react-native-countdown-component`
 
 ## Preview
 
