@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text, TouchableOpacity, AppState, AppStateStatus } from 'react-native'
+import { StyleSheet, View, Text, TouchableOpacity, AppState, AppStateStatus, I18nManager } from 'react-native'
 
 import { CountDownProps, CountDownState } from './countdown.types'
 
@@ -194,7 +194,7 @@ CountDown.defaultProps = {
 
 const styles = StyleSheet.create({
   timeCont: {
-    flexDirection: 'row',
+    flexDirection: I18nManager.isRTL ? 'row-reverse' : 'row',
     justifyContent: 'center',
   },
   timeTxt: {
