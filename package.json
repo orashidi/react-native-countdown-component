@@ -4,7 +4,7 @@
   "description": "React Native CountDown Component",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YakAlexey/react-native-countdown-component.git"
+    "url": "https://github.com/orashidi/react-native-countdown-component.git"
   },
   "keywords": [
     "react-native",
@@ -19,12 +19,12 @@
   ],
   "author": {
     "name": "Alexey Yak",
-    "email": "yak.alexey@outlook.com"
+    "email": "sh.omidrashidi@gmail.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/YakAlexey/react-native-countdown-component",
+  "homepage": "https://github.com/orashidi/react-native-countdown-component",
   "bugs": {
-    "url": "https://github.com/YakAlexey/react-native-countdown-component/issues"
+    "url": "https://github.com/orashidi/react-native-countdown-component/issues"
   },
   "devDependencies": {
     "@react-native/typescript-config": "^0.79.2",
